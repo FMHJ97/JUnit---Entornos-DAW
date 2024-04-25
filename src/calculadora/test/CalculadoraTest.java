@@ -85,7 +85,6 @@ class CalculadoraTest {
 	}
 	
 	@Test
-	@Disabled
 	void testAssertSame2(){
 		String numero1 ="3";
 		int numero2 =3;
