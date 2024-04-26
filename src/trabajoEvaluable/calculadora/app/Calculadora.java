@@ -9,7 +9,7 @@ public class Calculadora {
 		System.out.println(esNumeroCapicua(505));
 		System.out.println(esNumPrimo(505));
 		System.out.println(siguientePrimo(-150));
-		System.out.println(potenciaEntero(5, 6));
+		System.out.println(potencia(2.5, 2));
 		System.out.println(countDigits(271237));
 	}
 	
@@ -100,7 +100,7 @@ public class Calculadora {
 	 * @param exp Exponente de la potencia.
 	 * @return Double resultado de potencia.
 	 */
-	public static double potenciaEntero(double base, double exp) {
+	public static double potencia(double base, double exp) {
 		return Math.pow(base, exp);
 	}
 
