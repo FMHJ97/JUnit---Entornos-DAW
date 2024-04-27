@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class Calculadora {
 
-	public static void main(String[] args) {
-		System.out.println(factorialRecursivo(5));
-		System.out.println(esNumeroCapicua(505));
-		System.out.println(esNumPrimo(505));
+	public static void main(String[] args) {		
+		System.out.println(factorial(5));
+		System.out.println(esCapicua(505));
+		System.out.println(esPrimo(505));
 		System.out.println(siguientePrimo(-150));
 		System.out.println(potencia(2.5, 2));
-		System.out.println(countDigits(271237));
+		System.out.println(digitos(271237));
 	}
 	
 	/**
@@ -19,7 +19,7 @@ public class Calculadora {
 	 * @param num Número entero.
 	 * @return True, capicua. False, no es capicua.
 	 */
-	public static boolean esNumeroCapicua(int num) {
+	public static boolean esCapicua(int num) {
 		String str = "" + num;
 		StringBuffer sb = new StringBuffer(str).reverse();
 		
@@ -32,7 +32,7 @@ public class Calculadora {
 	 * @param num Número entero que deseamos conocer su factorial.
 	 * @return Devuelve el valor factorial de un entero.
 	 */
-	public static int factorialRecursivo(int n) {
+	public static int factorial(int n) {
 		Scanner sc = new Scanner(System.in);
 		while (n < 0) {
 			System.out.println("Error. Introduzca un número mayor de 0:");
@@ -41,16 +41,22 @@ public class Calculadora {
 		if (n == 0 || n == 1) {
 			return 1;
 		}
-		return n * factorialRecursivo(n - 1);
+		return n * factorial(n - 1);
 	}
 	
 	/**
-	 * Método que cuenta el número de dígitos de un número entero.
+	 * Método que cuenta el número de dígitos de un número ENTERO. 
 	 * @param num El entero que deseamos conocer la cantidad de dígitos.
 	 * @return Devuelve el número de dígitos.
 	 */
-	public static int countDigits(int num) {
-		return Integer.toString(num).length();
+	public static int digitos(int num) {
+		String str = Integer.toString(num);
+		String[] array = str.split("[-]");
+		int digits = 0; 
+		for (String a : array) {
+			digits += a.length();
+		}
+		return digits;
 	}
 	
 	/**
@@ -58,7 +64,7 @@ public class Calculadora {
 	 * @param num Número entero.
 	 * @return True, es primo. False, no es primo.
 	 */
-	public static boolean esNumPrimo(int num) {
+	public static boolean esPrimo(int num) {
 		Scanner sc = new Scanner(System.in);
 		boolean esPrimo = true;
 		
@@ -87,7 +93,7 @@ public class Calculadora {
 	 */
 	public static int siguientePrimo(int num) {
 		num++;
-		while (!esNumPrimo(num)) {
+		while (!esPrimo(num)) {
 			num++;
 		}
 		return num;
