@@ -2,6 +2,9 @@ package trabajoEvaluable.calculadora.app;
 
 import java.util.Scanner;
 
+/**
+ * @author Francisco Manuel Hernández 1ºDAW
+ */
 public class Calculadora {
 
 	public static void main(String[] args) {		

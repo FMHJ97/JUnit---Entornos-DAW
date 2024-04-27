@@ -12,6 +12,7 @@ import trabajoEvaluable.arrays.app.FuncionesArray;
 /**
  * Clase que comprueba el funcionamiento de cada uno de los métodos 
  * de la Clase FuncionesArray.java a través de JUnit5.
+ * @author Francisco Manuel Hernández 1ºDAW
  */
 class FuncionesArrayTest {
 

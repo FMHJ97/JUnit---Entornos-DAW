@@ -12,6 +12,7 @@ import trabajoEvaluable.calculadora.app.Calculadora;
 /**
  * Clase que comprueba el funcionamiento de cada uno de los métodos 
  * de la Clase Calculadora.java a través de JUnit5.
+ * @author Francisco Manuel Hernández 1ºDAW
  */
 class CalculadoraTest {
 

@@ -1,5 +1,8 @@
 package trabajoEvaluable.arrays.app;
 
+/**
+ * @author Francisco Manuel Hernández 1ºDAW
+ */
 public class FuncionesArray {
 
 	/**
